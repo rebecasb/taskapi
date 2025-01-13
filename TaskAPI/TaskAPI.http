@@ -1,6 +1,6 @@
 @TaskAPI_HostAddress = http://localhost:5105
 
-GET {{TaskAPI_HostAddress}}/weatherforecast/
+GET {{TaskAPI_HostAddress}}/taskapi/
 Accept: application/json
 
 ###

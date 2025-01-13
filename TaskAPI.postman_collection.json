@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "893e4ee4-22cf-4243-8b25-680c10e52831",
+		"name": "TaskAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12843603"
+	},
+	"item": [
+		{
+			"name": "Tarea",
+			"item": [
+				{
+					"name": "Create Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyZWJlY2Euc2FsYXphcmJAZ21haWwuY29tIiwiZXhwIjoxNzM2NzMzNjU3LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDc4IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA3OCJ9.Lzp0N40_JZ5R4OibduTr-JKAlXJO_oNtPxhkmJWIzNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"cuarta tarea\",\r\n  \"descripcion\": \"esto es una prueba\",\r\n  \"estado\": \"Completada\",\r\n  \"fechaVencimiento\": \"2025-01-12T23:44:01.396Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7078/tarea",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7078",
+							"path": [
+								"tarea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyZWJlY2Euc2FsYXphcmJAZ21haWwuY29tIiwiZXhwIjoxNzM2NzI4Njc1LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDc4IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA3OCJ9.ZKBURg4skWd2OZwKXXPHT8XJpdQwWFA-pjGbdCgs2Hk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"primera tarea\",\r\n  \"descripcion\": \"esto es una prueba de actualización\",\r\n  \"estado\": \"Pendiente\",\r\n  \"fechaVencimiento\": \"2025-01-12T23:48:01.396Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7078/tarea/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7078",
+							"path": [
+								"tarea",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyZWJlY2Euc2FsYXphcmJAZ21haWwuY29tIiwiZXhwIjoxNzM2NzMxNDIwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDc4IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA3OCJ9.tVHNeVxKvPYIUktpDHy5-1MNeGmBB9uE2u-83J5cqVI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7078/tarea/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7078",
+							"path": [
+								"tarea",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tarea ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyZWJlY2Euc2FsYXphcmJAZ21haWwuY29tIiwiZXhwIjoxNzM2NzMxNDIwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDc4IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA3OCJ9.tVHNeVxKvPYIUktpDHy5-1MNeGmBB9uE2u-83J5cqVI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7078/tarea/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7078",
+							"path": [
+								"tarea",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tarea Filtro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyZWJlY2FAZXhhbXBsZS5jb20iLCJleHAiOjE3MzY3MzM4MzYsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcwNzgiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MDc4In0.b6eQYVzRt3qvy9fKYhr1s-ab8G8GlaS3oZWtyZfzGuc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7078/tarea?pagina=1&paginaLimite=15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7078",
+							"path": [
+								"tarea"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": "1"
+								},
+								{
+									"key": "paginaLimite",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Autenticar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7078/usuario/autenticar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7078",
+							"path": [
+								"usuario",
+								"autenticar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
